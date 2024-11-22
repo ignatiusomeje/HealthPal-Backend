@@ -18,6 +18,13 @@ export async function createUser(req, res) {
       message: `account created`,
     });
   } catch (error) {
+    if (error.message.includes("E11000 duplicate key error collection")) {
+      return res.status(400).json({
+        status: 400,
+        message: "Email already exist",
+      });
+    }
+
     res.status(500).json({
       status: 500,
       message: "Error creating User",

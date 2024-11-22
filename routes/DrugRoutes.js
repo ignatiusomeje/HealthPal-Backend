@@ -11,7 +11,7 @@ const drugRouter = express.Router();
 
 drugRouter.post("/", DrugValidation, authenticate, createDrug);
 drugRouter.get("/", authenticate, getAllDrugs);
-drugRouter.get("/:id", authenticate, getADrug);
+drugRouter.get("/:id", getADrug);
 // drugRouter.put("/:id", DrugValidation, updateADrug);
 // drugRouter.delete("/:id", deleteADrug);
 

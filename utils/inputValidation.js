@@ -1,6 +1,7 @@
 import Joi from "joi";
 
 export const UserValidation = async (req, res, next) => {
+  console.log(req.body)
   try {
     const userSchema = Joi.object({
       email: Joi.string().trim().email().required("email is required"),
