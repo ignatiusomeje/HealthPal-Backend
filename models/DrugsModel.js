@@ -8,7 +8,7 @@ const DrugSchema = new mongoose.Schema(
       minlength: 6,
       maxlength: 50,
       trim: true,
-      unique: true,
+      // unique: true,
     },
     description: {
       type: String,

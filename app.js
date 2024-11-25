@@ -26,9 +26,9 @@ mongoose
   .catch((err) => console.log(`error encountered ${err}`));
 
 
-App.use((req,res)=> res.status(404).json({
-  status:404,
-  message: "Route does not exist"
+App.use((req,res)=> res.status(200).json({
+  status:200,
+  message: "Welcome to health"
 }))
 
 App.use((err, req,res) => {
